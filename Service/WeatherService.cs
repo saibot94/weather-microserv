@@ -1,10 +1,11 @@
-namespace WeatherMicroservice.Service 
+namespace WeatherMicroservice.Service
 {
+    using System.Threading.Tasks;
     using WeatherMicroservice;
 
-    interface WeatherService 
+    interface WeatherService
     {
         /// Gets the weather for all of the following numberOfDays days.
-        WeatherReport[] getWeather(int numberOfDays = 5);
+        Task<WeatherReport[]> GetWeather(double lng, double lat, int numberOfDays = 5);
     }
 }

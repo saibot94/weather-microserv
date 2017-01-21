@@ -2,6 +2,7 @@ namespace WeatherMicroservice
 {
     public static class Extensions
     {
+
         public static double? TryParse(this string input)
         {
             double result;
@@ -14,5 +15,7 @@ namespace WeatherMicroservice
                 return default(double?);
             }
         }
+
+        
     }
 }
